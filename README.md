@@ -34,7 +34,7 @@ Before running this script, ensure that you have the following:
 5. The script will connect to the specified node and retrieve the list of available extrinsics modules and methods.
 
 6. The output will be displayed in the console, showing each module, its corresponding methods, and the arguments it needs to pass. For example:
-   ```
+```
 Module: baseFee
 - Method: setBaseFeePerGas
   Arguments: fee: U256
@@ -56,7 +56,7 @@ Module: palletCounter
 - Method: evmToSubstrate
   Arguments: evmAddress: H160, amount: U256, subtract: bool, signature: SpCoreEcdsaSignature
    ...
-   ```
+```
 
 7. After listing all the extrinsics methods, the script will automatically disconnect from the node.
 
