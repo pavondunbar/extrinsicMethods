@@ -33,19 +33,28 @@ Before running this script, ensure that you have the following:
 
 5. The script will connect to the specified node and retrieve the list of available extrinsics modules and methods.
 
-6. The output will be displayed in the console, showing each module and its corresponding methods. For example:
+6. The output will be displayed in the console, showing each module, its corresponding methods, and the arguments it needs to pass. For example:
    ```
-   Module: authorship
-   - Method: setUncles
-   Module: babe
-   - Method: reportEquivocation
-   - Method: reportEquivocationUnsigned
-   Module: balances
-   - Method: forceTransfer
-   - Method: setBalance
-   - Method: transfer
-   - Method: transferAll
-   - Method: transferKeepAlive
+Module: baseFee
+- Method: setBaseFeePerGas
+  Arguments: fee: U256
+- Method: setElasticity
+  Arguments: elasticity: Permill
+Module: palletCounter
+- Method: mint
+  Arguments: account: AccountId32, amount: u128
+- Method: burn
+  Arguments: account: AccountId32, amount: u128
+- Method: lock
+  Arguments: amount: u128
+- Method: unlock
+  Arguments: amount: u128
+- Method: checkEvmBalance
+  Arguments: evmAddress: H160
+- Method: substrateToEvm
+  Arguments: evmAddress: H160, amount: u128, add: bool
+- Method: evmToSubstrate
+  Arguments: evmAddress: H160, amount: U256, subtract: bool, signature: SpCoreEcdsaSignature
    ...
    ```
 
